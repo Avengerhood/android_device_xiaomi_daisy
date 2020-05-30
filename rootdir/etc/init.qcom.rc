@@ -179,14 +179,6 @@ on boot
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
-    # Notification LED
-    chown system system /sys/class/leds/red/blink
-    chown system system /sys/class/leds/green/blink
-    chown system system /sys/class/leds/blue/blink
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/blue/brightness
-
     # Allow access to emmc rawdump block partition and dload sysfs node
     chown root system /dev/block/bootdevice/by-name/rawdump
     chmod 0660 /dev/block/bootdevice/by-name/rawdump
@@ -647,9 +639,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
 on property:dev.bootcomplete=1
     setprop sys.io.scheduler "bfq"
 
-on property:apexd.status=ready
-    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
-
 # XiaomiParts
     chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
@@ -674,4 +663,7 @@ on property:apexd.status=ready
 
  # USB Fastcharge
     chown system system /sys/kernel/fast_charge/force_fast_charge
-    chmod 0660 /sys/kernel/fast_charge/force_fast_charge   
+    chmod 0660 /sys/kernel/fast_charge/force_fast_charge
+
+on property:apexd.status=ready
+    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind

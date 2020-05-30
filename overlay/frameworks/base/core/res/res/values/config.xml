@@ -693,6 +693,10 @@
     <string name="config_SmartChargingSupspendValue" translatable="false">0</string>
     <string name="config_SmartChargingResumeValue" translatable="false">1</string>
 
+    <!-- Do the battery/notification LEDs support pulsing?
+    Used to decide if we show pulse settings -->
+    <bool name="config_ledCanPulse">true</bool>
+    
     <!-- True if the firmware supports Wi-Fi link probing -->
     <bool name="config_wifi_link_probing_supported">false</bool>
 
