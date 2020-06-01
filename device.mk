@@ -17,8 +17,10 @@
 $(call inherit-product, vendor/xiaomi/daisy/daisy-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, vendor/google/customization/config.mk)
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+
+#New Google Assistant
+TARGET_SUPPORTS_NGA := true
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
