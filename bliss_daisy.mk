@@ -40,3 +40,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="daisy_sprout"
 
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Device Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.bliss.maintainer=Avengerhood
+    
+BLISS_BUILDTYPE=OFFICIAL
