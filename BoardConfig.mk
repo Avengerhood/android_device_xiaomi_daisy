@@ -51,7 +51,7 @@ BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/xiaomi/daisy
 TARGET_KERNEL_VERSION := 4.9
-TARGET_PREBUILT_RECOVERY_RAMDISK := $(DEVICE_PATH)/ramdisk-recovery.zip
+TARGET_PREBUILT_RECOVERY_RAMDISK := device/xiaomi/daisy/ramdisk-recovery.zip
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
